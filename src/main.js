@@ -1,5 +1,6 @@
 import { createGitGraph } from './js/bg.js';
 import { initHero } from './js/hero.js';
+import './js/rocket-layer.js';
 
 const canvas = document.getElementById('bg');
 const graph = canvas ? createGitGraph(canvas) : null;
