@@ -237,7 +237,12 @@ main,
   margin: 0 0 20px;
 }
 
-.hero h1 span {
+.hero__word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero__ch {
   display: inline-block;
   opacity: 0;
   transform: translateY(0.5em) rotate(4deg);
@@ -1096,7 +1101,7 @@ main,
     scroll-behavior: auto;
   }
 
-  .hero h1 span {
+  .hero__ch {
     animation: none;
     opacity: 1;
     transform: none;

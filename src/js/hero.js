@@ -11,11 +11,29 @@ export function initHero() {
 
   const nameEl = $('name');
   if (nameEl) {
-    [...ME.name].forEach((ch, i) => {
-      const s = document.createElement('span');
-      s.textContent = ch === ' ' ? '\u00A0' : ch;
-      s.style.animationDelay = `${0.05 * i + 0.2}s`;
-      nameEl.appendChild(s);
+    let i = 0;
+    ME.name.split(/(\s+)/).forEach((part) => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) {
+        const space = document.createElement('span');
+        space.className = 'hero__ch hero__space';
+        space.textContent = '\u00A0';
+        space.style.animationDelay = `${0.05 * i + 0.2}s`;
+        nameEl.appendChild(space);
+        i += 1;
+        return;
+      }
+      const word = document.createElement('span');
+      word.className = 'hero__word';
+      [...part].forEach((ch) => {
+        const s = document.createElement('span');
+        s.className = 'hero__ch';
+        s.textContent = ch;
+        s.style.animationDelay = `${0.05 * i + 0.2}s`;
+        word.appendChild(s);
+        i += 1;
+      });
+      nameEl.appendChild(word);
     });
     nameEl.setAttribute('aria-label', ME.name);
   }
