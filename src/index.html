@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Thilan Theekshana — Full Stack Developer specializing in Flutter, React, Java, Spring Boot, and immersive web experiences."
+    />
+    <title>Thilan Theekshana — Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <canvas id="bg" aria-hidden="true"></canvas>
+
+    <header class="nav">
+      <a class="nav__brand" href="#top">Thilan Theekshana</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#recommendations">Recs</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="toggle" id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+        <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" hidden>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#recommendations">Recommendations</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p class="hero__role">Full Stack Developer</p>
+          <h1 id="name" aria-label="Thilan Theekshana"></h1>
+          <p class="lede">
+            I build fast, readable software — from Flutter apps and React
+            frontends to Java Spring Boot backends.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Say hello</a>
+            <a class="btn" href="https://github.com/Thilan071" target="_blank" rel="noopener noreferrer">See my code</a>
+            <a class="btn" href="/Thilan_Mallika_Arachchi_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+          </div>
+        </div>
+
+        <section class="win" aria-label="Animated code editor showing a developer profile">
+          <div class="bar"><i></i><i></i><i></i><b>developer.ts</b></div>
+          <pre><code id="code"></code><span class="caret" id="caret"></span></pre>
+          <div class="term" id="term"></div>
+        </section>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section__head">
+          <p class="eyebrow">Work experience</p>
+          <h2>Roles where I’ve shipped real products.</h2>
+        </div>
+        <div class="experience__list">
+          <article class="experience__item reveal">
+            <div class="experience__meta">
+              <p class="experience__company">Forciva</p>
+              <p class="experience__dates">2025 – Present</p>
+            </div>
+            <div class="experience__body">
+              <h3>Flutter and Web Developer</h3>
+              <p class="experience__role">Building production mobile and web products for clients.</p>
+
+              <h4>MaleTaxi (MTCC) — Production ride-hailing platform</h4>
+              <ul>
+                <li>Delivered customer and driver Flutter apps for iOS and Android covering booking, trip lifecycle, payments, and in-ride communication.</li>
+                <li>Built the full customer flow: OTP / Google / Apple sign-in, live map booking, fare estimate, vehicle selection, ride tracking, trip history, ratings, SOS, and payment receipts.</li>
+                <li>Built the driver app for online/offline status, trip accept/reject, navigation, trip progress, Agora voice calls, and foreground services.</li>
+                <li>Integrated REST APIs and Socket.IO for real-time location, trip status, chat, and call events with reconnect handling.</li>
+                <li>Developed the operations admin portal with React, Vite, and Ant Design — live vehicle map, trips, drivers, wallets, payments, SOS, and reports.</li>
+                <li>Shipped Play Store / Codemagic iOS releases with crash reporting, secure token storage, and map tile caching.</li>
+              </ul>
+
+              <h4>Ceyjobs.lk — Job Portal</h4>
+              <ul>
+                <li>Led the job portal with React and Next.js, including separate user and admin dashboards.</li>
+                <li>Built the Firebase backend (Firestore, Cloud Functions): auth, file uploads, subscription payments, and SMS/email notifications.</li>
+                <li>Added resume builder with PDF download, job search filters, and an employer analytics dashboard.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience__item reveal">
+            <div class="experience__meta">
+              <p class="experience__company">AbsolX</p>
+              <p class="experience__dates">February 2025 – June 2025</p>
+            </div>
+            <div class="experience__body">
+              <h3>Flutter Developer — Rise Management App</h3>
+              <p class="experience__role">AI-powered mobile app for Rise Tech Village operations.</p>
+              <ul>
+                <li>Spearheaded development of a feature-rich Flutter app spanning HR, Finance, Inventory, Sales, Procurement, AI Grow, and CCTV monitoring.</li>
+                <li>Integrated an AI chatbot, predictive analytics, real-time monitoring, and customizable dashboards.</li>
+                <li>Collaborated with backend engineers using FastAPI and supported secure deployment on AWS/Azure.</li>
+                <li>Focused on a mobile-first, cloud-integrated UX with real-time alerts and workflow automation.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience__item reveal">
+            <div class="experience__meta">
+              <p class="experience__company">Axiata Digital Labs</p>
+              <p class="experience__dates">2022 – 2023</p>
+            </div>
+            <div class="experience__body">
+              <h3>Software Engineering Intern</h3>
+              <p class="experience__role">11-month internship during the Software Engineering degree pathway.</p>
+              <ul>
+                <li>Contributed to full-stack engineering work in a production environment.</li>
+                <li>Gained hands-on experience with collaborative delivery, code quality practices, and real product workflows.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section__head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects shaped for real people and real use.</h2>
+        </div>
+        <div class="work__grid">
+          <article class="project reveal">
+            <div class="project__media project__media--wide">
+              <img src="/projects/kandy-erp-1.png" alt="Kandy Club Module ERP owner dashboard" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>01</span>
+                <span>ERP · Laravel · Next.js</span>
+              </div>
+              <h3>Kandy Club Module ERP</h3>
+              <p>
+                Modular ERP for club and restaurant operations — membership, bookings,
+                bar/restaurant POS, inventory, payroll &amp; HR, accounting, housekeeping,
+                and role-based access. Built as a multi-tenant vendor workspace with
+                subdomain onboarding.
+              </p>
+              <div class="project__links">
+                <a href="https://vendor.abcerp.duckdns.org/login" target="_blank" rel="noreferrer">Live ERP</a>
+                <button type="button" class="gallery-trigger" data-gallery="kandy" data-title="Kandy Club Module ERP">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media project__media--wide">
+              <img src="/projects/ar-placement-1.png" alt="AR AI Smart Placement camera landing" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>02</span>
+                <span>WebXR · Three.js · AI</span>
+              </div>
+              <h3>AR + AI Smart Placement</h3>
+              <p>
+                Browser-first spatial commerce for furniture — true-scale floor footprints,
+                guided room scanning, and measured fit validation before the 3D product
+                appears. Built with WebXR / Three.js for Android Chrome immersive AR.
+              </p>
+              <div class="project__links">
+                <a href="https://heartfelt-crostata-485872.netlify.app/" target="_blank" rel="noreferrer">Live demo</a>
+                <a href="/projects/ar-placement-blueprint.pdf" target="_blank" rel="noreferrer">Blueprint</a>
+                <button type="button" class="gallery-trigger" data-gallery="ar-placement" data-title="AR + AI Smart Placement">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media">
+              <img src="/projects/maletaxi-1.png" alt="Malé Taxi Line app screens" loading="lazy" />
+              <img src="/projects/maletaxi-2.png" alt="Malé Taxi Line booking screen" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>03</span>
+                <span>Flutter · Production</span>
+              </div>
+              <h3>Malé Taxi Line</h3>
+              <p>
+                Customer Flutter app for MTCC’s ride-hailing platform in Malé —
+                registration, live map booking, fare estimates, vehicle selection,
+                real-time driver tracking, trip history, and receipts.
+              </p>
+              <div class="project__links">
+                <a href="https://play.google.com/store/apps/details?id=mv.mtcc.TaxiApp&hl=en" target="_blank" rel="noreferrer">Google Play</a>
+                <button type="button" class="gallery-trigger" data-gallery="maletaxi" data-title="Malé Taxi Line">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media project__media--single">
+              <img src="/projects/agroconnect.png" alt="AgroConnect for Farmers app" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>04</span>
+                <span>Flutter · Mobile</span>
+              </div>
+              <h3>AgroConnect for Farmers</h3>
+              <p>
+                Bridges farmers and buyers with weather updates, crop price trends,
+                farming tips, e-learning, and a friendly offline-capable experience.
+              </p>
+              <div class="project__links">
+                <button type="button" class="gallery-trigger" data-gallery="agroconnect" data-title="AgroConnect for Farmers">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media project__media--single">
+              <img src="/projects/transport.png" alt="Public Transport Tracker app" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>05</span>
+                <span>Flutter · UI/UX</span>
+              </div>
+              <h3>Public Transport Tracker</h3>
+              <p>
+                Commuter-focused interface for real-time transport tracking —
+                clearer schedules, less overcrowding friction, and smoother daily travel.
+              </p>
+              <div class="project__links">
+                <button type="button" class="gallery-trigger" data-gallery="transport" data-title="Public Transport Tracker">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media project__media--single">
+              <img src="/projects/penalty-app.jpg" alt="Online Penalty Payment app login" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>06</span>
+                <span>React Native · UI/UX</span>
+              </div>
+              <h3>Online Penalty Payment App</h3>
+              <p>
+                Mobile experience that simplifies vehicle fine payments — clearer
+                details, faster flow, less confusion for drivers and authorities.
+              </p>
+              <div class="project__links">
+                <button type="button" class="gallery-trigger" data-gallery="penalty-app" data-title="Online Penalty Payment App">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media project__media--wide">
+              <img src="/projects/penalty-site.png" alt="Online Penalty Payment website" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>07</span>
+                <span>WordPress · Web</span>
+              </div>
+              <h3>Online Penalty Payment Site</h3>
+              <p>
+                Digital bridge between car owners and authorities — faster fine
+                payments and lower administrative overhead around non-compliance.
+              </p>
+              <div class="project__links">
+                <button type="button" class="gallery-trigger" data-gallery="penalty-site" data-title="Online Penalty Payment Site">Gallery</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__media project__media--single">
+              <img src="/projects/heritage.png" alt="Heritage Tourism App screen" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>08</span>
+                <span>Flutter · Tourism</span>
+              </div>
+              <h3>Heritage Tourism App</h3>
+              <p>
+                Helps travelers discover lesser-known cultural and historical sites —
+                hidden gems beyond the usual tourist trail.
+              </p>
+              <div class="project__links">
+                <button type="button" class="gallery-trigger" data-gallery="heritage" data-title="Heritage Tourism App">Gallery</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about__grid">
+          <div class="about__portrait reveal">
+            <img src="/images/profile.png" alt="Thilan Theekshana" />
+            <img class="about__grad" src="/images/graduation.jpeg" alt="Thilan Theekshana at graduation" />
+          </div>
+          <div>
+            <div class="section__head">
+              <p class="eyebrow">About</p>
+              <h2>Who am I?</h2>
+            </div>
+            <div class="about__body reveal">
+              <p>
+                Hi, I’m Thilan Theekshana, a Software Engineering graduate with
+                Lower Second Honours from the University of Westminster. I
+                specialize in full-stack development, with expertise in Java,
+                Spring Boot, React, Flutter, and Firebase.
+              </p>
+              <p>
+                I’m passionate about creating efficient, scalable solutions and
+                intuitive user experiences. A motivated learner and collaborative
+                team player, I thrive in dynamic environments — driving innovation
+                and solving complex problems with creativity and precision.
+              </p>
+              <ul class="skills" aria-label="Skills">
+                <li>Flutter / React Native</li>
+                <li>React / Next.js</li>
+                <li>Java / Spring Boot</li>
+                <li>JavaScript / TypeScript</li>
+                <li>UI/UX · Figma</li>
+                <li>Firebase / APIs</li>
+                <li>Tailwind / Bootstrap</li>
+                <li>Python / WordPress</li>
+                <li>Git / Jira / Postman</li>
+              </ul>
+              <dl class="about__facts">
+                <div>
+                  <dt>Name</dt>
+                  <dd>Thilan Theekshana</dd>
+                </div>
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:thilantheekshana221@gmail.com">thilantheekshana221@gmail.com</a></dd>
+                </div>
+                <div>
+                  <dt>Phone</dt>
+                  <dd><a href="tel:+94783861093">+94 78 3861 093</a></dd>
+                </div>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Sri Lanka</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section recommendations" id="recommendations">
+        <div class="section__head">
+          <p class="eyebrow">Recommendations</p>
+          <h2>What teammates say about working with me.</h2>
+        </div>
+
+        <div class="recs" data-recs>
+          <article class="recs__slide is-active" data-rec-slide>
+            <img class="recs__photo" src="/testimonials/adl.jpeg" alt="Axiata Digital Labs" />
+            <blockquote class="recs__quote">
+              <p>“We would like to express our sincere gratitude for choosing Intervest on this journey. We trust it has been enriching, we wish you continued success and fulfillment. Best wishes for your next chapter. We hope to welcome you back at Intervest in the future.”</p>
+              <footer>Axiata Digital Labs</footer>
+            </blockquote>
+          </article>
+
+          <article class="recs__slide" data-rec-slide hidden>
+            <img class="recs__photo" src="/testimonials/nuwanthika.jpeg" alt="Nuwanthika" />
+            <blockquote class="recs__quote">
+              <p>“A friendly and humble Software Engineer with a passion for developing innovative solutions, committed to continuous learning, teamwork, and delivering high-quality results.”</p>
+              <footer>Nuwanthika — Software Engineer, Axiata Digital Labs</footer>
+            </blockquote>
+          </article>
+
+          <article class="recs__slide" data-rec-slide hidden>
+            <img class="recs__photo" src="/testimonials/thilini.jpg" alt="Thilini" />
+            <blockquote class="recs__quote">
+              <p>“Thilan's remarkable skills and positive attitude contributed greatly to the team's success. His dedication to delivering high-quality work and his commitment to excellence were truly inspiring and made a lasting impact.”</p>
+              <footer>Thilini — Senior Software Quality Assurance Engineer, Axiata Digital Labs</footer>
+            </blockquote>
+          </article>
+
+          <article class="recs__slide" data-rec-slide hidden>
+            <img class="recs__photo" src="/testimonials/darshana.jpg" alt="Darshana" />
+            <blockquote class="recs__quote">
+              <p>“Collaborating with Thilan has been an absolute pleasure; his dedication to excellence and strong team spirit truly shine through. Keep up the great work, Thilan!”</p>
+              <footer>Darshana — Senior Software Engineer, Axiata Digital Labs</footer>
+            </blockquote>
+          </article>
+
+          <article class="recs__slide" data-rec-slide hidden>
+            <img class="recs__photo" src="/testimonials/gayan.jpg" alt="Gayan" />
+            <blockquote class="recs__quote">
+              <p>“Thilan’s exceptional technical skills and proactive approach played a pivotal role in the success of our project. His ability to collaborate effectively with the team, coupled with his problem-solving mindset, made the entire process smooth and efficient. His contributions not only met but often exceeded expectations, making him an invaluable asset to the team. Working with Thilan was a truly rewarding experience.”</p>
+              <footer>Gayan — Senior Software Engineer, Axiata Digital Labs</footer>
+            </blockquote>
+          </article>
+
+          <div class="recs__controls">
+            <button type="button" class="recs__btn" data-rec-prev aria-label="Previous recommendation">‹</button>
+            <div class="recs__dots" data-rec-dots></div>
+            <button type="button" class="recs__btn" data-rec-next aria-label="Next recommendation">›</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education" id="education">
+        <div class="section__head">
+          <p class="eyebrow">Qualifications</p>
+          <h2>My education</h2>
+        </div>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <span class="timeline__year">2024</span>
+            <div>
+              <h3>BEng (Hons) Software Engineering — Lower Second Honours</h3>
+              <p>University of Westminster (IIT)</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__year">2021–2024</span>
+            <div>
+              <h3>Software Engineering Degree Pathway</h3>
+              <p>Informatics Institute of Technology (IIT) / University of Westminster</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__year">2018–2020</span>
+            <div>
+              <h3>Advanced Level — Combined Maths</h3>
+              <p>Dharmaraja College, Kandy</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section__head">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s talk about your next product.</h2>
+          <p class="section__lede">
+            Tell me about the app, the platform, or the problem. I’ll reply with a clear next step.
+          </p>
+        </div>
+        <form class="contact__form reveal" id="contact-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+          </label>
+          <label class="contact__full">
+            <span>Message</span>
+            <textarea name="message" rows="5" required placeholder="What are we building?"></textarea>
+          </label>
+          <div class="contact__footer">
+            <button class="btn primary" type="submit">Send message</button>
+            <p class="contact__status" id="contact-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+        <div class="contact__direct reveal">
+          <a href="mailto:thilantheekshana221@gmail.com">thilantheekshana221@gmail.com</a>
+          <a href="tel:+94783861093">+94 78 3861 093</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Thilan Theekshana Mallika Arachchi. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://github.com/Thilan071" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/thilan-theekshana-b5b20a230/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/thi_lan_theek_shana" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="mailto:thilantheekshana221@gmail.com">Email</a>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <div class="lightbox__backdrop" data-close></div>
+      <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <div class="lightbox__top">
+          <h2 id="lightbox-title">Gallery</h2>
+          <button type="button" class="lightbox__close" data-close aria-label="Close gallery">×</button>
+        </div>
+        <div class="lightbox__stage">
+          <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Previous image">‹</button>
+          <img id="lightbox-image" alt="" />
+          <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next image">›</button>
+        </div>
+        <p class="lightbox__count" id="lightbox-count"></p>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
