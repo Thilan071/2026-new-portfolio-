@@ -106,11 +106,6 @@ const galleries = {
     { src: '/projects/kandy-erp-5.png', alt: 'Register member form' },
     { src: '/projects/kandy-erp-6.png', alt: 'Inventory gate pass management' },
   ],
-  'ar-placement': [
-    { src: '/projects/ar-placement-1.png', alt: 'AR Smart Placement camera landing' },
-    { src: '/projects/ar-placement-2.png', alt: 'Furniture catalog with Web AR entry' },
-    { src: '/projects/ar-placement-3.png', alt: 'Chair sofa bed and table product cards' },
-  ],
   maletaxi: [
     { src: '/projects/maletaxi-1.png', alt: 'Malé Taxi Line app screens' },
     { src: '/projects/maletaxi-2.png', alt: 'Malé Taxi Line booking screen' },
