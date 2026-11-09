@@ -1,20 +1,22 @@
 :root {
-  --bg: #f4f5fb;
-  --ink: #141733;
-  --muted: #5a5f85;
-  --line: rgba(40, 50, 120, 0.16);
-  --accent: #4c4ddc;
-  --accent-ink: #fff;
-  --ed-bg: #12152b;
-  --ed-bar: #1b1f3d;
-  --ed-text: #d9dcf5;
-  --ed-dim: #6c72a3;
-  --k: #ff7aa8;
-  --s: #7de3f4;
-  --p: #ffc857;
-  --v: #b9a4ff;
-  --ok: #6ee7a8;
-  --surface: rgba(255, 255, 255, 0.55);
+  --bg: #ffffff;
+  --ink: #000000;
+  --muted: #6b6b6b;
+  --line: rgba(0, 0, 0, 0.12);
+  --accent: #000000;
+  --accent-ink: #ffffff;
+  --ed-bg: #111111;
+  --ed-bar: #1a1a1a;
+  --ed-text: #f2f2f2;
+  --ed-dim: #8a8a8a;
+  --k: #ffffff;
+  --s: #d0d0d0;
+  --p: #f5f5f5;
+  --v: #b8b8b8;
+  --ok: #e8e8e8;
+  --surface: rgba(255, 255, 255, 0.72);
+  --shadow: rgba(0, 0, 0, 0.14);
+  --media-tint: #e8e8e8;
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(0.2, 0.9, 0.3, 1.2);
@@ -23,28 +25,67 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0c0e22;
-    --ink: #eceeff;
-    --muted: #9aa0cc;
-    --line: rgba(140, 150, 255, 0.18);
-    --accent: #8c8dff;
-    --accent-ink: #0c0e22;
-    --ed-bg: #151937;
-    --ed-bar: #1e2347;
-    --surface: rgba(21, 25, 55, 0.55);
+    --bg: #000000;
+    --ink: #ffffff;
+    --muted: #a0a0a0;
+    --line: rgba(255, 255, 255, 0.14);
+    --accent: #ffffff;
+    --accent-ink: #000000;
+    --ed-bg: #111111;
+    --ed-bar: #1a1a1a;
+    --ed-text: #f2f2f2;
+    --ed-dim: #8a8a8a;
+    --k: #ffffff;
+    --s: #d0d0d0;
+    --p: #f5f5f5;
+    --v: #b8b8b8;
+    --ok: #e8e8e8;
+    --surface: rgba(18, 18, 18, 0.72);
+    --shadow: rgba(0, 0, 0, 0.45);
+    --media-tint: #1a1a1a;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0c0e22;
-  --ink: #eceeff;
-  --muted: #9aa0cc;
-  --line: rgba(140, 150, 255, 0.18);
-  --accent: #8c8dff;
-  --accent-ink: #0c0e22;
-  --ed-bg: #151937;
-  --ed-bar: #1e2347;
-  --surface: rgba(21, 25, 55, 0.55);
+  --bg: #000000;
+  --ink: #ffffff;
+  --muted: #a0a0a0;
+  --line: rgba(255, 255, 255, 0.14);
+  --accent: #ffffff;
+  --accent-ink: #000000;
+  --ed-bg: #111111;
+  --ed-bar: #1a1a1a;
+  --ed-text: #f2f2f2;
+  --ed-dim: #8a8a8a;
+  --k: #ffffff;
+  --s: #d0d0d0;
+  --p: #f5f5f5;
+  --v: #b8b8b8;
+  --ok: #e8e8e8;
+  --surface: rgba(18, 18, 18, 0.72);
+  --shadow: rgba(0, 0, 0, 0.45);
+  --media-tint: #1a1a1a;
+}
+
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --ink: #000000;
+  --muted: #6b6b6b;
+  --line: rgba(0, 0, 0, 0.12);
+  --accent: #000000;
+  --accent-ink: #ffffff;
+  --ed-bg: #111111;
+  --ed-bar: #1a1a1a;
+  --ed-text: #f2f2f2;
+  --ed-dim: #8a8a8a;
+  --k: #ffffff;
+  --s: #d0d0d0;
+  --p: #f5f5f5;
+  --v: #b8b8b8;
+  --ok: #e8e8e8;
+  --surface: rgba(255, 255, 255, 0.72);
+  --shadow: rgba(0, 0, 0, 0.14);
+  --media-tint: #e8e8e8;
 }
 
 *,
@@ -307,7 +348,7 @@ main,
 .win {
   background: var(--ed-bg);
   border-radius: 14px;
-  box-shadow: 0 30px 60px -20px rgba(20, 23, 80, 0.45);
+  box-shadow: 0 30px 60px -20px var(--shadow);
   overflow: hidden;
   font-family: var(--font-mono);
   font-size: clamp(0.74rem, 1.25vw, 0.9rem);
@@ -447,7 +488,7 @@ main,
   object-position: top;
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 0 18px 40px rgba(20, 23, 80, 0.12);
+  box-shadow: 0 18px 40px var(--shadow);
   transition: transform 0.35s ease;
 }
 
@@ -459,7 +500,7 @@ main,
 .project__media:not(.project__media--wide) img {
   max-height: 480px;
   object-fit: contain;
-  background: color-mix(in srgb, var(--bg) 70%, #cfd3ee);
+  background: var(--media-tint);
   padding: 0.75rem;
 }
 
@@ -526,8 +567,8 @@ main,
 .about__portrait > img:first-child {
   width: 100%;
   border-radius: 14px;
-  background: color-mix(in srgb, var(--bg) 70%, #cfd3ee);
-  box-shadow: 0 22px 50px rgba(20, 23, 80, 0.14);
+  background: var(--media-tint);
+  box-shadow: 0 22px 50px var(--shadow);
 }
 
 .about__grad {
@@ -539,7 +580,7 @@ main,
   object-fit: cover;
   border-radius: 12px;
   border: 4px solid var(--bg);
-  box-shadow: 0 14px 30px rgba(20, 23, 80, 0.16);
+  box-shadow: 0 14px 30px var(--shadow);
 }
 
 .about__body p {
@@ -691,8 +732,8 @@ main,
   object-fit: cover;
   object-position: center top;
   border-radius: 14px;
-  box-shadow: 0 22px 50px rgba(20, 23, 80, 0.16);
-  background: color-mix(in srgb, var(--bg) 70%, #cfd3ee);
+  box-shadow: 0 22px 50px var(--shadow);
+  background: var(--media-tint);
 }
 
 .recs__quote {
@@ -701,7 +742,7 @@ main,
   border-radius: 14px;
   background: var(--ed-bg);
   color: var(--ed-text);
-  box-shadow: 0 30px 60px -20px rgba(20, 23, 80, 0.45);
+  box-shadow: 0 30px 60px -20px var(--shadow);
   display: grid;
   align-content: center;
   gap: 1.1rem;
@@ -924,7 +965,7 @@ main,
 .lightbox__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(12, 14, 34, 0.72);
+  background: rgba(0, 0, 0, 0.78);
   backdrop-filter: blur(8px);
 }
 
@@ -974,7 +1015,7 @@ main,
   min-height: 240px;
   overflow: hidden;
   border-radius: 12px;
-  background: color-mix(in srgb, var(--bg) 70%, #cfd3ee);
+  background: var(--media-tint);
 }
 
 .lightbox__stage img {
@@ -993,7 +1034,7 @@ main,
   height: 2.6rem;
   border: 0;
   border-radius: 999px;
-  background: rgba(18, 23, 51, 0.82);
+  background: rgba(0, 0, 0, 0.82);
   color: #fff;
   font-size: 1.6rem;
   line-height: 1;
